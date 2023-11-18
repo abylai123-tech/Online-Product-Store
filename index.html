@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/> 
+    <title>Продуктовый Магазин</title>
+</head>
+<body>
+    <!-- Шапка 1  -->
+    <div id="header_1">
+        <button class="prev-btn">❮</button>
+        <button class="next-btn">❯</button>
+        <div class="text">
+            <p>Перейти на новый сайт</p>
+        </div>
+        <button class="go-button"><a href="account.html" target="_self">Перейти</a></button>
+
+
+        <div class="cart-container">
+            <button class="cart" id="cart" onclick="openCartModal()" >
+                <img class="cart__image" src="img/cart-icon.png" alt="Cart"/>
+                <div class="cart__num" id="cart_num">0</div>
+              </button>
+        </div>     
+
+        <div id="cartModal" class="cart-modal">
+            <div class="cart-modal-content">
+                <span class="close" onclick="closeCartModal()">&times;</span>
+                <div id="cartContent">
+                    <!-- Содержимое корзины будет отображаться здесь -->
+                </div>
+                <div id="totalCost">Итоговая сумма: 0 тенге.</div>
+            </div>
+        </div>
+
+    </div>
+
+      <!-- Шапка 2  -->
+    <div id="header_2">
+        <div class="icon-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>  
+
+
+<!-- Модальное окно -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="header-menu is-opened">
+            <div class="header-menu-logo-desktop">Magnum. Наполняем жизнь</div>
+            <div class="header-menu-container">
+                <div class="header-menu-left">
+                    <ul class="header-menu__list">
+                        <li><a href="#special-offers" target="_self">Акции</a></li>
+                        <li><a href="#special-offers" target="_self">Каталог скидок</a></li>
+                        <li><a href="#special-offers" target="_self">Программа лояльности</a></li>
+                        <li><a href="#special-offers" target="_self">Готовим с magnum</a></li>
+                        <li><a href="#order-form" target="_self">Заказ с доставкой</a></li>
+                        <li><a href="#order-form" target="_self">Магазины</a></li>
+                        <li><a href="#order-form" target="_self">Magnum corp</a></li>
+                        <li><a href="#order-form" target="_self">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header-menu-right">
+                    <ul class="header-menu__list">
+                        <li><a href="#about-us" target="_self">О компании</a></li>
+                        <li><a href="#about-us" target="_self">Работа в Magnum</a></li>
+                        <li><a href="#order-form" target="_self">Наши бренды</a></li>
+                        <li><a href="#news" target="_self">Magnum News</a></li>
+                        <li><a href="#compliance" target="_self">Служба Комплаенс</a></li>
+                        <li><a href="#survey" target="_self">Опрос по ассортименту</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-menu-bottom">
+                <div class="header-menu__box">
+                    <p>Служба поддержки. 7766 | звонок бесплатный.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Magnumkz" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                        <a href="https://www.instagram.com/magnum.kz/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                        <a href="wa.me/77064047071" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                        <a href="https://www.tiktok.com/@magnum.kz" target="_blank"> <i class="fa-brands fa-tiktok fa-xl"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-vk fa-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+       <!-- Покупка онлайн  -->
+        <div class="buy-online">
+            <button><a href="#catalog" target="_self">Покупка онлайн</a></button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#catalog" target="_self">Продукты</a></li>
+                <li><a href="#special-offers" target="_self">Акции</a></li>
+                <li><a href="#order-form" target="_self">Доставка</a></li>
+                <li><a href="payment.html" target="_blank">Оплата</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#footer" target="_self">Контакты</a></li>
+                <li><a href="account.html" target="_blank">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Основной контент -->
+    <div id="main"> 
+        <!-- Cлайдер шоу -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide custom-slide-wrap"><img src="img/img_1.jpg" alt="Image 1"></div>
+                    <div class="swiper-slide custom-slide-wrap"><img src="img/img_2.jpg" alt="Image 2"></div>
+                    <div class="swiper-slide custom-slide-wrap"><img src="img/img_3.jpg" alt="Image 3"></div>
+                    <div class="swiper-slide custom-slide-wrap"><img src="img/img_4.jpg" alt="Image 4"></div>
+                    <div class="swiper-slide custom-slide-wrap"><img src="img/img_5.jpg" alt="Image 5"></div>
+                    <div class="swiper-slide custom-slide-wrap"><img src="img/img_6.jpg" alt="Image 6"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="slider-text">
+                    Welcome to our market place!
+                </div>
+            </div>
+
+         <!-- О нас -->
+         <div id="about">
+            <h2>О нас</h2>
+            <p>Добро пожаловать в магазин Magnum! Мы являемся крупнейшей торгово-розничной сетью в Казахстане с богатым ассортиментом качественных товаров. Наша цель - предоставить вам лучший выбор продуктов по доступным ценам. С нами вы можете легко совершать покупки онлайн, заказывать доставку и получать акции и скидки. Благодарим вас за выбор Magnum!</p>
+            
+            <button id="toggleInfoBtn" onclick="toggleInfo()">Показать дополнительную информацию</button>
+        
+            <div id="additionalInfo" style="display: none;">
+                <p>Мы гордимся тем, что предлагаем широкий ассортимент свежих продуктов высокого качества.</p>
+                <p>Наша команда работает каждый день, чтобы удовлетворить потребности наших клиентов.</p>
+                <p>Спасибо, что выбрали Magnum!</p>
+            </div>
+        </div>
+
+        <!-- Каталог продуктов -->
+        <div id="catalog">
+            <h1>Каталог продуктов</h1>
+            <input type="text" id="searchInput" placeholder="Поиск продуктов...">
+            <button id="searchButton">Найти</button>
+            <div class="product-list" id="productList">
+                <!-- Сюда будут добавляться продукты  -->
+            </div>   
+        </div>
+
+        <!-- Акции -->
+        <div id="special-offers">
+            <h2>Акции и специальные предложения</h2>
+            <div class="offer">
+                <img src="img/offer_1.png" alt="Акция 1">
+                <h3>Скидка 20% на морепродукты</h3>
+                <p>Только сегодня! Воспользуйтесь скидкой на свежие фрукты в наших магазинах.</p>
+            </div>
+            <div class="offer">
+                <img src="img/offer_2.jpg" alt="Акция 2">
+                <h3>Бесплатная доставка</h3>
+                <p>При покупке продуктов на сумму от 5000 тенге доставка бесплатно!</p>
+            </div>
+            <div class="offer">
+                <img src="img/offer_3.png" alt="Акция 3">
+                <h3>Секретная скидка для постоянных клиентов</h3>
+                <p>Постоянным клиентам - специальная скидка 10% на все продукты при заказе через сайт!</p>
+            </div>
+            <div class="offer">
+                <img src="img/offer_4.jpg" alt="Акция 4">
+                <h3>Праздничные подарки</h3>
+                <p>Каждый заказ на Новый год сопровождается подарком - уникальным набором продуктов для праздничного стола.</p>
+            </div>
+
+            <div id="offerDetailsModal" class="offer_modal">
+                <div class="offer-details-content">
+                    <span class="close" onclick="closeOfferDetailsModal()">&times;</span>
+                    <h2 id="offerTitle"></h2>
+                    <img src="" alt="" id="offerImage">
+                    <p id="offerDescription"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Доставка -->
+        <div id="order-form">
+            <h1>Оформление заказа</h1>
+            <label for="city">Выберите город:</label>
+            <select id="city">
+                <option value="Алматы">Алматы</option>
+                <option value="Нур-Султан">Нур-Султан</option>
+            </select>
+        
+            <label for="address">Введите адрес доставки:</label>
+            <input type="text" id="address" placeholder="Введите улицу">
+        
+            <label for="apartment">Квартира/Дом:</label>
+            <input type="text" id="apartment" placeholder="Введите номер квартиру">
+        
+            <label for="entrance">Подъезд:</label>
+            <input type="text" id="entrance" placeholder="Введите номер подъезда">
+        
+            <label for="floor">Этаж:</label>
+            <input type="text" id="floor" placeholder="Введите номер этажа">
+        
+            <button id="confirmOrderBtn">Подтвердить заказ</button>
+        </div>      
+        
+
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A57fd7b7f08f39cf4b7a38d5938710a993c0fa45cd965165998b50155ab0814a3&amp;width=1700&amp;height=700px&amp;lang=ru_RU&amp;scroll=true"></script>
+       <!-- Красиво оформленное модальное окно -->
+        <div id="orderConfirmationModal1" class="order_modal">
+            <div class="order_details_content">
+                <span class="close_form" onclick="closeOrderConfirmationModal()">&times;</span>
+                <h2>Ваш заказ успешно оформлен!</h2>
+                <p>Ожидайте свой заказ от курьера.</p>
+
+                <!-- Элементы для отображения данных -->
+                <p>Город: <span id="modalCity"></span></p>
+                <p>Адрес: <span id="modalAddress"></span></p>
+                <p>Квартира/Офис: <span id="modalApartment"></span></p>
+                <p>Подъезд: <span id="modalEntrance"></span></p>
+                <p>Этаж: <span id="modalFloor"></span></p>
+            </div>
+        </div>
+        
+        <!-- Отзывы -->
+        <div id="reviews">
+            <h2>Отзывы клиентов</h2>
+            <!-- Форма для добавления нового отзыва -->
+            <div id="addReviewForm">
+                <label for="reviewText">Ваш отзыв:</label>
+                <textarea id="reviewText" placeholder="Напишите ваш отзыв"></textarea>
+                <button onclick="addReview()">Добавить отзыв</button>
+            </div>
+        
+            <!-- Список отзывов -->
+            <div id="reviewList">
+                <!-- Отзывы будут добавляться здесь -->
+            </div>
+        </div>
+    </div>  
+
+    <!-- Нижний подвал -->
+    <div id="footer" class="flex-container">
+        <div class="magnum">
+            <h1>MAGNUM</h1>
+            <p>Magnum вместе с вами с 2007 года. За 15 лет мы открыли 200+ филиалов в четырнадцати городах Казахстана. За прошедшие годы мы стали крупнейшей торгово-розничной сетью в Казахстане и продолжаем динамично развиваться, стремясь предоставить любимым покупателям большой ассортимент качественных товаров, низкие цены и лучший сервис.</p>
+            <div class="line">
+                <span>Cвязаться с нами: +7-706-404-70-71</span>
+                <hr><br>
+            </div>
+            <div class="share-buttons">
+                <h2>Контакты</h2>
+                <div class="icon-container">
+                    <a href="https://www.facebook.com/Magnumkz" target="_blank" class="icon-box" title="Facebook"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                    <a href="https://www.tiktok.com/@magnum.kz" target="_blank" class="icon-box" title="Twitter"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                    <a href="https://www.instagram.com/magnum.kz/" target="_blank" class="icon-box" title="Instagram"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    <a href="wa.me/77064047071" target="_blank" class="icon-box" title="Whatsapp"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+                    <a href="https://discord.com/login" target="_blank" class="icon-box" title="Discord"><i class="fa-brands fa-discord fa-xl"></i></a>
+                </div>                
+            </div>
+        </div>
+        <div class="help column">
+            <h2>Нужна помощь?</h2>
+            <p>Центр помощи</p>
+            <p>Условия использования</p>
+            <p>Наш блог</p>
+            <p>Контакт с нами</p>
+            <p>Карьера</p>
+        </div>
+        <div class="comments column">
+            <h2>Каталог скидок</h2> 
+            <p>Magnum новости</p>
+            <p>Работа в Magnum</p>
+            <p>Готовим с Magnum</p>
+            <p>Торги в Magnum</p>
+            <p>Служба комплаенс</p>
+        </div>
+
+        <div class="payment-icons">
+            <h2>Мы принимаем</h2>
+            <a href="payment.html" target="_blank">
+                <img src="img/card_3.jpg" alt="Visa">
+            </a>
+            <a href="payment.html" target="_blank">
+                <img src="img/card_2.jpg" alt="MasterCard">
+            </a>
+            <a href="payment.html" target="_blank">
+                <img src="img/card_3.jpg" alt="PayPal">
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Magnum 2023 &copy;. Все права защищены</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
